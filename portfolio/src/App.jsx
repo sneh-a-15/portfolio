@@ -53,8 +53,8 @@ function App() {
           </div>
 
           {/* Nav */}
-          <nav className="hidden md:flex space-x-12">
-            <a href="#" className="text-green-900 hover:text-black text-lg font-bold">home</a>
+          <nav className="hidden md:flex space-x-12 scroll-smooth" id="home">
+            <a href="#home" className="text-green-900 hover:text-black text-lg font-bold">home</a>
             <a href="#about" className="text-green-900 hover:text-black text-lg font-bold">about</a>
             <a href="#projects" className="text-green-900 hover:text-black text-lg font-bold">projects</a>
             <a href="#contact" className="text-green-900 hover:text-black text-lg font-bold">contact</a>
@@ -77,7 +77,7 @@ function App() {
       </header>
 
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-15 py-20 pt-5">
+      <section className="max-w-7xl mx-auto px-15 py-20 pt-5" >
         <div className="grid grid-cols-1 lg:grid-cols-2  items-center">
           <div>
             <h1
@@ -177,7 +177,7 @@ function App() {
       </section>
 
       {/* Description Section with Landscape Banner */}
-      <section className="w-full">
+      <section className="w-full scroll-smooth" id="about">
         {/* Landscape Banner Image - Replace placeholder with actual image */}
         <div className="w-full h-48 relative overflow-hidden">
           <img
@@ -217,7 +217,7 @@ function App() {
       </section>
 
       {/* Skills Section */}
-      <section className="max-w-6xl mx-auto px-6 py-15">
+      <section className="max-w-6xl mx-auto px-6 py-15 scroll-smooth" id="skills">
         <h2 className="text-4xl font-bold text-center mb-16">Skills</h2>
 
         <div className="flex flex-wrap justify-center gap-4 animate-fade-in">
@@ -285,7 +285,7 @@ function App() {
       </section>
 
       {/* Projects Section */}
-     <section className="max-w-4xl mx-auto px-6 py-8">
+     <section className="max-w-4xl mx-auto px-6 py-8 scroll-smooth" id="projects">
         <h2 className="text-4xl font-bold text-center mb-12 text-slate-800">
           Projects
         </h2>
@@ -368,7 +368,7 @@ function App() {
       {/* Contact Section */}
     <section
   id="contact"
-  className="max-w mx-auto px-6 py-10 relative"
+  className="max-w mx-auto px-6 py-10 relative scroll-smooth"
   style={{
     backgroundImage: `url('/bg-1.jpeg')`,
     backgroundSize: 'cover',
