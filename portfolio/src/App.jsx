@@ -366,9 +366,9 @@ function App() {
 
 
       {/* Contact Section */}
-     <section
+    <section
   id="contact"
-  className="max-w mx-auto px-6 py-20 relative"
+  className="max-w mx-auto px-6 py-10 relative"
   style={{
     backgroundImage: `url('/bg-1.jpeg')`,
     backgroundSize: 'cover',
@@ -377,11 +377,11 @@ function App() {
   }}
 >
   <div className="relative z-10">
-    <h2 className="text-4xl font-bold text-center mb-16 text-white drop-shadow-md">Contact</h2>
-    <div className="max-w-2xl mx-auto bg-white/70 backdrop-blur-sm p-8 rounded-xl shadow-md">
-      <form onSubmit={handleSubmit} className="space-y-8">
+    <h2 className="text-3xl font-bold text-center mb-10 text-white drop-shadow-md">Contact</h2>
+    <div className="max-w-xl mx-auto bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-md">
+      <form onSubmit={handleSubmit} className="space-y-6">
         <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-3">
+          <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
             Name
           </label>
           <input
@@ -391,13 +391,13 @@ function App() {
             value={formData.name}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-lg"
+            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-base"
             placeholder="Your name"
           />
         </div>
 
         <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-3">
+          <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
             Email
           </label>
           <input
@@ -407,13 +407,13 @@ function App() {
             value={formData.email}
             onChange={handleInputChange}
             required
-            className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all text-lg"
+            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-base"
             placeholder="your.email@example.com"
           />
         </div>
 
         <div>
-          <label htmlFor="content" className="block text-sm font-semibold text-gray-700 mb-3">
+          <label htmlFor="content" className="block text-sm font-semibold text-gray-700 mb-2">
             Message
           </label>
           <textarea
@@ -422,15 +422,15 @@ function App() {
             value={formData.content}
             onChange={handleInputChange}
             required
-            rows={6}
-            className="w-full px-4 py-4 border border-gray-300 rounded-xl focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none transition-all resize-vertical text-lg"
+            rows={4}
+            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-vertical text-base"
             placeholder="Your message..."
           />
         </div>
 
         <button
           type="submit"
-          className="w-full bg-black text-white py-4 px-6 rounded-xl hover:bg-gray-800 transition-colors font-semibold text-lg"
+          className="w-full bg-black text-white py-3 px-5 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-base"
         >
           Submit
         </button>
@@ -438,6 +438,7 @@ function App() {
     </div>
   </div>
 </section>
+
 
 
       {/* Footer */}
