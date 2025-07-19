@@ -1,6 +1,6 @@
 import { useState } from "react";
-import React from 'react';
-import { Github, ExternalLink } from 'lucide-react';
+import React from "react";
+import { Github, ExternalLink } from "lucide-react";
 
 function App() {
   const [formData, setFormData] = useState({
@@ -24,15 +24,13 @@ function App() {
     alert("Form submitted! Check console for data.");
   };
 
-  
-
   return (
     <div
       className="min-h-screen bg-white"
       style={{ fontFamily: "Instrument Sans, sans-serif" }}
     >
       {/* Header */}
-       <header className="w-full bg-white ">
+      <header className="w-full bg-white ">
         <div className="max-w-7xl mx-auto px-6 py-4 flex items-center justify-between">
           {/* Logo */}
           <div className="w-32 h-auto">
@@ -60,34 +58,29 @@ function App() {
             <a href="#contact" className="text-green-900 hover:text-black text-lg font-bold">contact</a>
           </nav>
 
-          {/* Light Mode Toggle (optional interaction can be added later) */}
-          <div className="w-8 h-8 cursor-pointer">
-            <svg
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="currentColor"
-              strokeWidth="2"
-              className="w-full h-full"
-            >
-              <circle cx="12" cy="12" r="5" />
-              <path d="M12 1v2M12 21v2M4.22 4.22l1.42 1.42M18.36 18.36l1.42 1.42M1 12h2M21 12h2M4.22 19.78l1.42-1.42M18.36 5.64l1.42-1.42" />
-            </svg>
+          {/* NEW: Open to Work Badge with Animation */}
+          <div className="flex items-center gap-2 px-3 py-1 rounded-full bg-green-100 text-green-800 text-sm font-semibold shadow-md">
+            <span className="w-2.5 h-2.5 bg-green-500 rounded-full animate-[dot-pulse_2s_infinite_ease-in-out]"></span>
+            <span >Open to Work</span>
           </div>
+
         </div>
       </header>
 
       {/* Hero Section */}
-      <section className="max-w-7xl mx-auto px-15 py-20 pt-5" >
+      <section className="max-w-7xl mx-auto px-15 py-20 pt-5  scroll-smooth">
         <div className="grid grid-cols-1 lg:grid-cols-2  items-center">
           <div>
             <h1
-  className="text-5xl lg:text-6xl font-bold leading-tight"
-  style={{ textShadow: "2px 2px 4px rgba(75, 85, 99, 0.5)" }}
->
-  <span className="text-gray-700" style={{ color: "#403939" }}>Hello,</span>
-  <br />
-  <span className="text-black">I'm Sneha Nair.</span>
-</h1>
+              className="text-5xl lg:text-6xl font-bold leading-tight"
+              style={{ textShadow: "2px 2px 4px rgba(75, 85, 99, 0.5)" }}
+            >
+              <span className="text-gray-700" style={{ color: "#403939" }}>
+                Hello,
+              </span>
+              <br />
+              <span className="text-black">I'm Sneha Nair.</span>
+            </h1>
             <p
               className="text-2xl  mb-12 leading-tight font-bold "
               style={{ color: "#243A28" }}
@@ -128,20 +121,19 @@ function App() {
 
               {/* Twitter */}
               <a
-  href="https://x.com/snnehhaa_"
-  aria-label="X (Twitter)"
-  className="w-8 h-8 hover:text-green-900 text-gray-600 "
->
-  <svg
-    xmlns="http://www.w3.org/2000/svg"
-    viewBox="0 0 16 16"
-    fill="currentColor"
-    className="w-full h-full"
-  >
-    <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z"/>
-  </svg>
-</a>
-
+                href="https://x.com/snnehhaa_"
+                aria-label="X (Twitter)"
+                className="w-8 h-8 hover:text-green-900 text-gray-600 "
+              >
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  viewBox="0 0 16 16"
+                  fill="currentColor"
+                  className="w-full h-full"
+                >
+                  <path d="M12.6.75h2.454l-5.36 6.142L16 15.25h-4.937l-3.867-5.07-4.425 5.07H.316l5.733-6.57L0 .75h5.063l3.495 4.633L12.601.75Zm-.86 13.028h1.36L4.323 2.145H2.865z" />
+                </svg>
+              </a>
             </div>
           </div>
 
@@ -162,13 +154,9 @@ function App() {
                 <div className="text-gray-400 text-center">
                   <div className="text-4xl mb-4">🐱</div>
                   <div className="text-sm font-medium">
-                    Main Character
                     <br />
-                    Illustration
                   </div>
-                  <div className="text-xs mt-2 text-gray-300">
-                    Totoro-like character
-                  </div>
+                  <div className="text-xs mt-2 text-gray-300"></div>
                 </div>
               </div>
             </div>
@@ -217,43 +205,39 @@ function App() {
       </section>
 
       {/* Skills Section */}
-      <section className="max-w-6xl mx-auto px-6 py-15 scroll-smooth" id="skills">
+      <section
+        className="max-w-6xl mx-auto px-6 py-15 scroll-smooth"
+        id="skills"
+      >
         <h2 className="text-4xl font-bold text-center mb-16">Skills</h2>
 
         <div className="flex flex-wrap justify-center gap-4 animate-fade-in">
           {/* Python */}
-          
+
           <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
-            <img src="/cplusplus.svg" alt="C++" className="h-5 w-5" />{" "}
-            C++
+            <img src="/cplusplus.svg" alt="C++" className="h-5 w-5" /> C++
           </span>
           <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
-            <img src="/django.svg" alt="Django" className="h-5 w-5" />{" "}
-            Django
+            <img src="/django.svg" alt="Django" className="h-5 w-5" /> Django
           </span>
           <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
-            <img src="/docker.svg" alt="Docker" className="h-5 w-5" />{" "}
-            Docker
+            <img src="/docker.svg" alt="Docker" className="h-5 w-5" /> Docker
           </span>
           <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
-            <img src="/fastapi.svg" alt="FastAPI" className="h-5 w-5" />{" "}
-            FastAPI
+            <img src="/fastapi.svg" alt="FastAPI" className="h-5 w-5" /> FastAPI
           </span>
           <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
-            <img src="/figma.svg" alt="Figma" className="h-5 w-5" />{" "}
-            Figma
+            <img src="/figma.svg" alt="Figma" className="h-5 w-5" /> Figma
           </span>
           <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
-            <img src="/git.svg" alt="Git" className="h-5 w-5" />{" "}
-            Git
+            <img src="/git.svg" alt="Git" className="h-5 w-5" /> Git
           </span>
-            <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
+          <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
             <img src="/javascript.svg" alt="JavaScript" className="h-5 w-5" />{" "}
             JavaScript
           </span>
           <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
-            <img src="/mysql.svg" alt="MySQL" className="h-5 w-5" />{" "}
-            MySQL
+            <img src="/mysql.svg" alt="MySQL" className="h-5 w-5" /> MySQL
           </span>
           <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
             <img src="/nextdotjs.svg" alt="Next.js" className="h-5 w-5" />{" "}
@@ -264,13 +248,11 @@ function App() {
             PostgreSQL
           </span>
           <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
-            <img src="/python.svg" alt="Python" className="h-5 w-5" />{" "}
-            Python
+            <img src="/python.svg" alt="Python" className="h-5 w-5" /> Python
           </span>
           {/* React */}
           <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
-            <img src="/react.svg" alt="React" className="h-5 w-5" />{" "}
-            React
+            <img src="/react.svg" alt="React" className="h-5 w-5" /> React
           </span>
           {/* Tailwind */}
           <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
@@ -281,166 +263,161 @@ function App() {
             />{" "}
             Tailwind CSS
           </span>
+          {/*TypeScript */}
+          <span className="flex items-center gap-2 bg-green-100 px-4 py-2 rounded-full text-green-900 font-medium shadow hover:scale-105 hover:shadow-md transition-all duration-300">
+            <img src="/typescript.svg" alt="TypeScript" className="h-5 w-5" />{" "}
+            TypeScript
+          </span>
         </div>
       </section>
 
       {/* Projects Section */}
-     <section className="max-w-4xl mx-auto px-6 py-8 scroll-smooth" id="projects">
+      <section
+        className="max-w-4xl mx-auto px-6 py-8 scroll-mt-10"
+        id="projects"
+      >
         <h2 className="text-4xl font-bold text-center mb-12 text-slate-800">
           Projects
         </h2>
-        
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 place-items-center mb-10">
-            <div className="w-full max-w-sm bg-white p-6 rounded-lg shadow-lg group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <div className="relative">
-                <img src="/p1.png" alt="Project 1" className="w-full h-44 object-cover rounded" />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded">
-                  <a
-                    href="https://github.com/sneh-a-15/askmilo-rag-study-assistant"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition"
-                  >
-                    GitHub
-                  </a>
-                  <a
-                    href="https://askmilo.vercel.app"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-green-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-800 transition"
-                  >
-                    Live
-                  </a>
-                </div>
-              </div>
-              <div className="pt-4">
-                <h3 className="text-xl font-semibold mb-2 text-slate-800"> AskMilo - Your AI-Powered CS Study Buddy</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  AskMilo is an AI-powered study assistant that helps students master core CS subjects like Operating Systems, DBMS, and Computer Networks using a RAG (Retrieval-Augmented Generation) approach. It provides accurate, textbook-backed answers with follow-ups and an interactive UI.
-                </p>
-                <div className="flex flex-wrap gap-2 text-sm">
-                  <span className="bg-gray-200 px-2 py-1 rounded">FastAPI</span>
-                  <span className="bg-gray-200 px-2 py-1 rounded">Next.js</span>
-                  <span className="bg-gray-200 px-2 py-1 rounded">Pinecone</span>
-                </div>
-              </div>
-            </div>
 
-            {/* Project Card 2 */}
-            <div className="w-full max-w-sm bg-white p-6 rounded-lg shadow-lg group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
-              <div className="relative">
-                <img src="/p2.png" alt="Project 2" className="w-full h-44 object-cover rounded" />
-                <div className="absolute inset-0 bg-black/50 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded">
-                  <a
-                    href="https://github.com/sneh-a-15/refindr-research"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition"
-                  >
-                    GitHub
-                  </a>
-                  <a
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="bg-green-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-800 transition"
-                  >
-                    Live
-                  </a>
-                </div>
-              </div>
-              <div className="pt-4">
-                <h3 className="text-xl font-semibold mb-2 text-slate-800">ReFindr - Smart Search for Research Papers</h3>
-                <p className="text-gray-600 text-sm mb-4">
-                  ReFindr is a smart academic paper discovery tool that lets users search, bookmark, and preview research papers from major sources. It features keyword-based search, PDF previews, bookmark lists, and AI-powered summarization and tagging.
-                </p>
-                <div className="flex flex-wrap gap-2 text-sm">
-                  <span className="bg-gray-200 px-2 py-1 rounded">Python</span>
-                  <span className="bg-gray-200 px-2 py-1 rounded">Django</span>
-                  <span className="bg-gray-200 px-2 py-1 rounded">PostgreSQL</span>
-                </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 items-stretch mb-10">
+          <div className="w-full max-w-sm bg-gradient-to-br from-white to-green-50 p-6 rounded-lg shadow-lg group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div className="relative">
+              <img
+                src="/p1.png"
+                alt="Project 1"
+                className="w-full h-44 object-cover rounded"
+              />
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded">
+                <a
+                  href="https://github.com/sneh-a-15/askmilo-rag-study-assistant"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="https://askmilo.vercel.app"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-800 transition"
+                >
+                  Live
+                </a>
               </div>
             </div>
+            <div className="pt-4">
+              <h3 className="text-xl font-semibold mb-2 text-slate-800">
+                {" "}
+                AskMilo - Your AI-Powered CS Study Buddy
+              </h3>
+              <p className="text-gray-600 text-sm mb-4">
+                AskMilo is an AI-powered study assistant that helps students
+                master core CS subjects like Operating Systems, DBMS, and
+                Computer Networks using a RAG (Retrieval-Augmented Generation)
+                approach. It provides accurate, textbook-backed answers with
+                follow-ups and an interactive UI.
+              </p>
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="bg-gray-200 px-2 py-1 rounded">FastAPI</span>
+                <span className="bg-gray-200 px-2 py-1 rounded">Next.js</span>
+                <span className="bg-gray-200 px-2 py-1 rounded">Pinecone</span>
+              </div>
+            </div>
+          </div>
+
+          {/* Project Card 2 */}
+          <div className="w-full max-w-sm bg-gradient-to-br from-white to-green-50 p-6 rounded-lg shadow-lg group relative transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+            <div className="relative">
+              <img
+                src="/p2.png"
+                alt="Project 2"
+                className="w-full h-44 object-cover rounded"
+              />
+              <div className="absolute inset-0 bg-black/50 flex items-center justify-center gap-4 opacity-0 group-hover:opacity-100 transition-opacity duration-300 rounded">
+                <a
+                  href="https://github.com/sneh-a-15/refindr-research"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-white text-black px-4 py-2 rounded-lg font-semibold hover:bg-gray-200 transition"
+                >
+                  GitHub
+                </a>
+                <a
+                  href="#"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="bg-green-700 text-white px-4 py-2 rounded-lg font-semibold hover:bg-green-800 transition"
+                >
+                  Live
+                </a>
+              </div>
+            </div>
+            <div className="pt-4">
+              <h3 className="text-xl font-semibold mb-2 text-slate-800">
+                ReFindr - Smart Search for Research Papers
+              </h3>
+              <p className="text-gray-600 text-sm mb-4">
+                ReFindr is a smart academic paper discovery tool that lets users
+                search, bookmark, and preview research papers from major
+                sources. It features keyword-based search, PDF previews,
+                bookmark lists, and AI-powered summarization and tagging.
+              </p>
+              <div className="flex flex-wrap gap-2 text-sm">
+                <span className="bg-gray-200 px-2 py-1 rounded">Python</span>
+                <span className="bg-gray-200 px-2 py-1 rounded">Django</span>
+                <span className="bg-gray-200 px-2 py-1 rounded">
+                  PostgreSQL
+                </span>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
-
       {/* Contact Section */}
-    <section
-  id="contact"
-  className="max-w mx-auto px-6 py-10 relative scroll-smooth"
-  style={{
-    backgroundImage: `url('/bg-1.jpeg')`,
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    backgroundRepeat: 'no-repeat',
-  }}
->
-  <div className="relative z-10">
-    <h2 className="text-3xl font-bold text-center mb-10 text-white drop-shadow-md">Contact</h2>
-    <div className="max-w-xl mx-auto bg-white/80 backdrop-blur-md p-6 rounded-lg shadow-md">
-      <form onSubmit={handleSubmit} className="space-y-6">
-        <div>
-          <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleInputChange}
-            required
-            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-base"
-            placeholder="Your name"
-          />
+      <section
+      id="contact"
+      className="relative scroll-smooth px-6 py-15"
+      style={{
+        backgroundImage: `url('/bg-1.jpeg')`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      <div className="relative z-10 max-w-md mx-auto">
+        {/* Glassmorphic Card */}
+        <div className="backdrop-blur-lg bg-black/30 border border-white/20 shadow-xl rounded-2xl px-8 py-12 text-center transition-all duration-700 ease-in-out hover:shadow-2xl hover:scale-105">
+          {/* Heading */}
+          <h2 className="text-3xl font-bold mb-8 text-red-300">Let's Connect</h2>
+          {/* Contact Info */}
+          <div className="space-y-6 text-white font-medium">
+            <div>
+              <p className="uppercase text-sm tracking-widest text-gray-300">Email</p>
+              <a
+                href="mailto:nairsneha1508@gmail.com"
+                className="text-xl hover:animate-pulse hover:text-green-200 transition duration-300"
+              >
+                nairsneha1508@gmail.com
+              </a>
+            </div>
+            <div>
+              <p className="uppercase text-sm tracking-widest text-gray-300">Twitter / X</p>
+              <a
+                href="https://x.com/snnehhaa_"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-xl hover:animate-pulse hover:text-green-200 transition duration-300"
+              >
+                @snnehhaa_
+              </a>
+            </div>
+          </div>
         </div>
-
-        <div>
-          <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleInputChange}
-            required
-            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none text-base"
-            placeholder="your.email@example.com"
-          />
-        </div>
-
-        <div>
-          <label htmlFor="content" className="block text-sm font-semibold text-gray-700 mb-2">
-            Message
-          </label>
-          <textarea
-            id="content"
-            name="content"
-            value={formData.content}
-            onChange={handleInputChange}
-            required
-            rows={4}
-            className="w-full px-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent outline-none resize-vertical text-base"
-            placeholder="Your message..."
-          />
-        </div>
-
-        <button
-          type="submit"
-          className="w-full bg-black text-white py-3 px-5 rounded-lg hover:bg-gray-800 transition-colors font-semibold text-base"
-        >
-          Submit
-        </button>
-      </form>
-    </div>
-  </div>
-</section>
-
-
-
+      </div>
+    </section>
       {/* Footer */}
       <footer className="text-center py-12 text-gray-500 border-t">
         <p className="font-medium">Made with ❤️ by sneha</p>
